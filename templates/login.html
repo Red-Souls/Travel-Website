@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container" style="padding:30px 30px;"></div>
+<form action="" method="post"> {% csrf_token %}
+	<div class="container">
+		<hr>
+		{% if request.session.error == e %}
+		<h2 style="color:red">{{request.session.error}}</h2>
+		{% endif %}
+	</div>
+
+	<div class="container">
+		<h2>Login Form</h2>
+		<label>username: <input type="text" class="form-control" name="username" autofocus="" autocapitalize="none" autocomplete="username" maxlength="150" required="" id="id_username"></label>
+		<br>
+		<label>password: <input type="password" class="form-control" name="password" autocomplete="current-password" required="" id="id_password"></label>
+		<br>
+
+		<input type="checkbox" checked="checked" name="remember"> Remember me
+
+		<input type="hidden" name="next" value="/"/>
+		<button type="submit">Login</button><br>
+	</div><br>
+
+	<div class="container signin">
+		<p>Are you new? <a href="/register/">
+				{% csrf_token %}Sign Up here....</a>.</p>
+	</div>
+</form>
+
+</div>
+
+
+<!---->
+<!--<h2 style="text-align:center; margin-top:25px;">LOGIN</h2>-->
+
+<!--<form name="form" action  = "login"-->
+<!--method="POST" >-->
+<!--{% csrf_token %}-->
+<!--<div style = "max-width:470px;">-->
+<!--<center>-->
+<!--<label><i class="fa fa-user"></i> USERNAME</label>-->
+
+<!--<input type="text" style="margin-left:20%;"-->
+<!--placeholder="Identifiant" name="username" />-->
+<!--</center>-->
+<!--</div>-->
+
+<!--<br>-->
+<!--<div style = "max-width:470px;">-->
+<!--<center>-->
+<!--<label><i class="fa fa-key"></i> PASSWORD</label>-->
+
+<!--<input type="password" style="margin-left:20%;"-->
+<!--placeholder="password" name="password" />-->
+<!--</center>-->
+<!--</div>-->
+
+<!--<br>-->
+
+<!--<div style = "max-width:470px;">-->
+<!--<center>-->
+<!--<button type="submit" value="Login" class="btn button-w3layouts">Login</button><br>-->
+<!--New User! <a href="/myapp/register/">REGISTER HERE</a>-->
+<!--</center>-->
+<!--</div>-->
+<!--<br>-->
+<!--</form>-->
+{% endblock %}

@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="banner">
+	<!-- start slider -->
+	<div id="fwslider">
+		<div class="slider_container">
+			{% for image in packageSlideImage %}
+                <div class="slide">
+                    <img src="/media/{{image.image}}/" width="500" height="700" alt="" />
+                    <div class="slide_content">
+                        <div class="slide_content_wrap">
+                            <h1 class="title">Explore {{package.placeName}}</h1>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+		</div>
+		<div class="timers"></div>
+		<div class="slidePrev"><span></span></div>
+		<div class="slideNext"><span></span></div>
+	</div>
+</div>
+<div class="content-bottom">
+	<div class="container">
+		<div style="background: rgba(211, 211, 211, 0.5); padding: 50px; text-align: justify; border-radius: 1rem;">
+			<div class="content_bottom-text">
+				{{package.description|safe|linebreaks}}	
+				<button type="submit" class="btn button-w3layouts" style="color:brown" onclick="window.location.href = '/book/{{package.id}}/'">BOOK NOW</button>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}

@@ -1,0 +1,160 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="banner">
+	<!-- start slider -->
+	<div id="fwslider">
+		<div class="slider_container">
+			<div class="slide">
+				<!-- Slide image -->
+				<img src="{% static 'slider1.jpg' %}" width="1000" height="700" alt="" />
+				<!-- /Slide image -->
+				<!-- Texts container -->
+				<div class="slide_content">
+					<div class="slide_content_wrap">
+						<!-- Text title -->
+						<h1 class="title">Explore Vietnam</h1>
+						<!-- /Text title -->
+						<!--<div class="button"><a href="#">See Details</a></div>-->
+					</div>
+				</div>
+				<!-- /Texts container -->
+			</div>
+			<!-- /Duplicate to create more slides -->
+			<div class="slide">
+				<img src="{% static 'slider2.jpg' %}" width="1000" height="700" alt="" />
+				<div class="slide_content">
+					<div class="slide_content_wrap">
+						<h1 class="title">Explore Vietnam</h1>
+						<!--<div class="button"><a href="#">See Details</a></div>-->
+					</div>
+				</div>
+			</div>
+
+			<div class="slide">
+				<img src="{% static 'slider3.jpg' %}" width="1000" height="700" alt="" />
+				<div class="slide_content">
+					<div class="slide_content_wrap">
+						<h1 class="title">Explore Vietnam</h1>
+						<!--<div class="button"><a href="#">See Details</a></div>-->
+					</div>
+				</div>
+			</div>
+			<!--/slide -->
+		</div>
+		<div class="timers"></div>
+		<div class="slidePrev"><span></span></div>
+		<div class="slideNext"><span></span></div>
+	</div>
+	<!--/slider -->
+</div>
+<div class="content-bottom">
+	<div class="container">
+		<div style="background: rgba(211, 211, 211, 0.5); padding: 50px; text-align: justify; border-radius: 1rem;">
+			<div class="main1_title">
+				<div><br></div>
+				<h2 style="font-size:45px"><b style="color:brown">WHY CHOOSE US</b></h2>
+				<br>
+	
+				<!--<p>"authentic customised tour packages India,Affordable services,Professional yet personalized services.</p>-->
+			</div>
+			<div class="row">
+	
+				<div class="col-sm-4">
+					<div class="bow_how">
+						<div class="icon_how">
+							<span class="icon_set_1_icon-81">
+	
+							</span>
+						</div>
+						<h3 style="color:green"> Quality Services </h3>
+						<p style="text-align:justify;"><b>
+								"Customer satisfaction can be only achieved by quality and time to time services.Knock us at
+								any hour and from
+								anywhere in the world,we re available .The company tries to give the ultimate satisfaction
+								and luxury depending
+								upon the traveller's need.We offer a wide range of services.</b>
+						</p>
+					</div>
+				</div>
+	
+	
+				<div class="col-sm-4">
+					<div class="bow_how">
+						<div class="icon_how">
+							<span class="icon_set_1_icon-81">
+							</span>
+	
+						</div>
+						<h3 style="color:green"> 24x7 Support</h3>
+						<p style="text-align:justify;">
+							<b>When on a foreign land travelling on an unchartered territory, you need a person to depend
+								on, even at odd hours.
+								We assign an executive to each of the client as one point contact during the travel,
+								ensuring that the guest is always in touch with a familiar voice, as well the executive has
+								all know how of the client.
+								We work 24 x 7 to support the clients, right from the enquiry stage till the departure, our
+								executives are always ready to take the call, even if it is at odd hours or for odd reasons.
+							</b>
+						</p>
+					</div>
+				</div>
+	
+	
+				<div class="col-sm-4">
+					<div class="bow_how">
+						<div class="icon_how">
+							<span class="icon_set_1_icon-81">
+	
+							</span>
+						</div>
+						<h3 style="color:green"> Our Clients</h3>
+						<p style="text-align:justify;"><b>We are here to render the best services to our clients who are
+								part of our goal.
+								Our clients, over the years, multiplied from small enterprises to big companies that include
+								both the private and public sector undertakings and thus leading us to spread all over the
+								nation.
+								Travellers’ feedbacks are our assets.
+								It helps us to gain our confidence level and improve our services to meet every client
+								needs.</b>
+						</p>
+	
+					</div>
+				</div>
+			</div>
+			<div><br></div>
+			<div class="row content_bottom-text">
+				<div class="col-md-7">
+					<h3 style="color:brown">Unlimited Vietnam<br>Unlimited Access</h3>
+					<p style="color:black"><b>An intoxicating medley of colors and cultures, art and architecture, languages
+							and landscapes,
+							wherever you go in India and whatever you want to experience, a journey here is guaranteed to
+							leave an indelible mark on you.
+							Its remarkable size and diversity means there is a vast range of experiences to choose from -
+							journeys to suit everyone.
+							Travelling with the family provides a cultural, fun-filled break for children; watch their faces
+							light up at colorful festivals,
+							or atop a magnificent elephant. If it's a special break for you and a loved one on your
+							honeymoon,
+							treat yourself to the most luxurious and romantic hotels in the world and stir the soul at
+							India's many spiritual sights, like pink-tinged Jaipur at dusk..</b></p>
+					<p style="color:black"><b>Wildlife-lovers are catered for in abundance; drift up the dreamy bird-filled
+							backwaters of Kerala on your private houseboat,
+							or glimpse rare Bengal tigers on an exciting jungle safari.
+							For those seeking a relaxed pace, the white-sand beaches of Goa, with hammocks strung between
+							swaying coconut trees,
+							offer total tranquillity, or simply rejuvenate at the spa and learn more of the healing
+							qualities of an Ayurvedic herbal massage.
+							There is a dazzling array of experiences in India to choose from and a unique itinerary for
+							every inquisitive traveler.</b> </p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div>
+	<br>
+</div>
+
+{% endblock %}

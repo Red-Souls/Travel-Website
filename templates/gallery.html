@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="features">
+	<div class="container">
+		<h3 class="m_3">Explore Vietnam</h3>
+		<div class="close_but"><i class="close1"> </i></div>
+		<div class="row">
+			{% for package in packages %}
+				<div class="col-md-3 top_box" style="margin-bottom: 30px;">
+					<div class="view view-ninth"><a href="/gallery/{{package.id}}/">
+							<img src="/media/{{package.image}}/" width="500" height="300" alt="" />
+							<div class="mask mask-1"> </div>
+							<div class="mask mask-2"> </div>
+							<div class="content">
+								<h2>{{package.placeName}}</h2>
+								{% if not user.username %}
+									<div class="center"><a href="/login/">LOGIN...</a></div>
+								{% endif %}
+							</div>
+						</a>
+					</div>
+				</div>
+			{% endfor %}
+			</div>
+		</div>
+	</div>
+{% endblock %}

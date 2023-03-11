@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="main">
+	<div class="shop_top">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-7">
+					<p class="m_8">Plan your trip with Trip Planner.Enjoy the trip at discounted rate.for any queries
+						related to trip packages
+						feel free to contact us.</p>
+					<div class="address">
+						<p>Vietnam Tour</p>
+						<p>536, Nguyen Van Cu, Ha Long</p>
+						<p>Vietnam</p>
+						<p>Phone:91 7907897867</p>
+						<p>Email: <span>support@vietnamtourist.com</span></p>
+						<p>Follow on: <span>Facebook</span>, <span>Twitter</span></p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12 contact">
+
+					<form method="POST" name="sentMessage" id="contactForm" novalidate>{% csrf_token %}
+						<h3>Let us know</h3>
+						<div class="control-group">
+							<div class="controls">
+								<label>Username: {{form.username}}</label>
+							</div>
+						</div>
+						<div class="control-group">
+							<div class="controls">
+								<label>Email: {{form.email}}</label>
+							</div>
+						</div>
+
+						<div class="control-group">
+							<div class="controls">
+								<label>Content: {{form.content}}</label>
+							</div>
+						</div>
+						<div id="success"> </div> <!-- For success/fail messages -->
+						<button type="submit" class="btn btn-primary pull-right">Send</button><br />
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+{% endblock %}

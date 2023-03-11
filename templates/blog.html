@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        {% for post in posts %}
+            <div class="col-md-3 top_box" style="margin-bottom: 30px; margin-top: 30px;">
+                <div class="view view-ninth"><a href="/blog/{{post.id}}/">
+                        <img src="/media/{{post.image}}/" width="500" height="300" alt="" />
+                        <div class="mask mask-1"> </div>
+                        <div class="mask mask-2"> </div>
+                        <div class="content">
+                            <h2>{{post.title}}</h2>
+                            {% if not user.username %}
+                                <div class="center"><a href="/login/">LOGIN...</a></div>
+                            {% endif %}
+                        </div>
+                    </a>
+                </div>
+            </div>
+        {% endfor %}
+        </div>
+    </div>
+</div>
+
+{% endblock %}
